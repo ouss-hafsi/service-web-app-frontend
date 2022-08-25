@@ -2,20 +2,18 @@ import {Link} from 'react-router-dom'
 import { Box,Typography,TextField, Button } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 
-const LandingNav = ( {handleChange, handleSubmit, signIn} ) => {
+const Login = ( {handleChange, handleSubmit} ) => {
     return (
       <>
-      <div className='landing-format'>
-
-     <form onSubmit={handleSubmit} >
-        <label htmlFor="username">username</label>
+    <div className='landing-format'>
+      
+     <form onSubmit={handleSubmit} className='login-form' >
+     <h1>Login</h1>
+        <label htmlFor="username"></label>
           <input onChange={(event) => handleChange (event)} type="text" id="username" placeholder="username" />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password"></label>
           <input onChange={(event) => handleChange (event)} type="password" id="password" placeholder="password" />
-          <p><span>User name and password should match.</span></p>
-          <button>Login</button>
-          <p className='create-account'><Link to='/SignUp'>Create an Account</Link></p>
-          <Button endIcon={<LoginIcon/>}  type='submit'>Sign in</Button>
+          <button  type='submit'>Sign in</button>
         </form>
 
       </div>
@@ -39,4 +37,4 @@ const LandingNav = ( {handleChange, handleSubmit, signIn} ) => {
     );
   };
   
-  export default LandingNav;
+  export default Login;

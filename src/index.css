@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,29 +9,233 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*                                 LANDING PAGE                 */
+/*                                 LOGIN PAGE                */
 
-.login-box{
-  display: flex;
-  flex-direction: column;
-  max-width:400px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding: 5px;
-  border-radius: 20px ;
-  box-shadow: 5px 5px 10px grey;
-  height: 500px;
-
+.landing-format {
+  background-color:transparent;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888; 
 }
 
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+.login-form {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:20px;
+  
+}
+
+.login-form label {
+  font-size: 18px;
+  font-family:'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.login-form input{
+  border:1px solid #264653;
+  font-size: 13px;
+  
+  width: 300px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.login-form button{
+background-color: black;
+color: white;
+width: 300px;
+height: 50px;
+}
+
+
+
+/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
   color:white !important;
   background-color:red !important;
   width: 100px;
   margin-top:20px !important;
   text-transform: none !important;
+  margin-left:80px !important;
+} */
+
+
+/*                                 HOME         */
+
+.posts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+
 }
 
 
 
+
+/*               NAVIGATION            */
+.nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 15vh;
+ background-color:black; 
+ --bs-nav-link-hover-color: #ED116B;
+}
+
+.nav li{
+list-style: none;
+
+}
+
+
+.nav-link{
+  text-decoration: none;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+
+.nav-link:hover{
+  color: white;
+
+}
+
+.nav-link:hover{
+  color: #ED116B;
+
+}
+
+.brand{
+ margin-left: 20px ;
+  z-index: 3;
+  margin-top:-10px;
+  text-decoration: none;
+  color: #ED116B;
+  font-family: 'Open Sans';
+  font-size: 18px;
+  font-weight: bold;
+  --bs-nav-link-hover-color: #ED116B;
+}
+
+.brand:hover{
+color: white;
+ }
+.nav-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+
+.nav-toggle div {
+  width: 40px;
+  height: 2px;
+  margin:5px;
+  background-color: #ED116B;
+  transition: 0.4s ease-in;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+  /* TOGGLE ICON ANIMATION */
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+    
+.toggle .line2{
+    opacity: 0;
+    }
+    
+.toggle .line3{
+      transform: rotate(45deg) translate(-4px, -5px);
+    }
+  
+
+
+@media  screen and (max-width:607px) {
+  .nav-toggle{
+    display: block;
+  }
+  .nav-menu{
+    position: fixed;
+    top: 15vh;
+    right: 0;
+    width: 50%;
+    height: 93vh;
+    padding-bottom: 300px;
+    background-color: black;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition:0.5s ease-in ;
+    z-index: 99;
+  }
+/* NAV ACTIVE CLASS */
+.nav-active {
+  transform: translateX(0%);
+}
+}
+
+
+
+
+/*                               WELCOME PAGE               */
+
+.welcome-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.hello{
+  font-family: 'open sans';
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: darkgray;
+  margin-top: 20px;
+}
+
+.landing-text{
+  color: darkgray;
+  font-family: 'open sans';
+  font-size: 16px;
+  font-weight: 100;
+
+}
+
+.logo-dark-mode{
+  width: 15% ;
+  margin-top:60px;
+  animation-delay: 1s;
+  animation: fadeIn 1s ease-in both;
+}
+
+.login-signup{
+  display: flex;
+}
+
+.login-welcome{
+  text-decoration: none;
+  color:black;
+}
+
+.login-welcome:hover{
+  color:red;
+}
+
+.signup-welcome{
+  text-decoration: none;
+  color: black;
+}

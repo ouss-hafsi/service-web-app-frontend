@@ -2,20 +2,23 @@
 // import './App.css';
 import './index.css'
 import React, { useState } from 'react'
-import { Routes, Route,useNavigate} from "react-router-dom";
+import { Routes, useLocation, Route,useNavigate} from "react-router-dom";
 import axios from 'axios';
 
 
 
 
 import Home from './components/Home';
-import SignupEmployee from './components/SignupEmployee';
-import LandingNav from './components/Landing';
 import UserInfo from './components/UserInfo';
+import Welcome from './components/Welcome';
+import Navigation from './components/Navigation';
+import Login from './components/Login'
+import SignupUser from './components/SignupUser';
 
 
 
 function App() {
+  const location = useLocation()
 
   const navigate = useNavigate()
  // The signin state
@@ -34,7 +37,7 @@ function App() {
 
    const handleSubmit = (event) => {
     event.preventDefault()
-        axios.post(`http://localhost:4000/users/signin`, signIn)
+        axios.post(`https://ouss-service-app.herokuapp.com/users/signin`, signIn)
           .then(res => {
             console.log(res)
           // save token to local storage
@@ -51,13 +54,16 @@ function App() {
 
   return (
    <>
-
+{location.pathname !== '/' && location.pathname !== '/login' && location.pathname !== '/signup' ? <Navigation/> : null}
 
 <main>
+
+
         <Routes>
-        <Route path="/" element={<LandingNav handleSubmit={handleSubmit} handleChange={handleChange} signIn={signIn} />} />
+        <Route path="/" element={<Welcome/>} />
+        <Route path="/login" element={<Login handleSubmit={handleSubmit} handleChange={handleChange} signIn={signIn} />} />
           <Route path="/home" element={<Home signIn={signIn}/>} />
-          <Route path="/signupem" element={<SignupEmployee/>} />
+          <Route path='/signup' element={<SignupUser/>}/>
           <Route path='/users/:id' element={<UserInfo/>}/>
         </Routes>
       </main>
