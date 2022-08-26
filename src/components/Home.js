@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+
+
 import ListGroup from "react-bootstrap/ListGroup";
 import Search from "./Search";
+import Employee from "./Employee";
 
 
 const Home = () => {
@@ -11,8 +12,8 @@ const Home = () => {
    
   const [employee, setEmployee] = useState([]);
   const [query, setQuery] = useState("");
-  const [disabled, setDisabled] = useState(false)
-  const [savedEmployee, setSavedEmployee] = useState([])
+  
+  // const [savedEmployee, setSavedEmployee] = useState([])
 
   function getData() {
     const config = localStorage.getItem("Token");
@@ -37,31 +38,18 @@ const Home = () => {
       // else if empty create a new array with the first elemenet
       localStorage.setItem('employee',JSON.stringify([findEmployee]))
     }
-    setSavedEmployee(findEmployee)
+    // setSavedEmployee(findEmployee)
    
   }
 
-//   function doubleCheck() {
-//     const getEmployee = localStorage.getItem('employee')
-//     const employeeArr = JSON.parse(getEmployee) 
-//         // console.log('DoubleCheck Here!!')
-//     if(employeeArr ) {
-//         console.log('employeeArr', employeeArr)
-//         const checkEmployee = employeeArr.find(employees => employees._id === employee.id) 
-//         console.log('check Employee', checkEmployee)
-//         if (checkEmployee) {
-//             return setDisabled(true)
-//         } 
-//     }
 
-// }
   
 
 
 
   useEffect(() => {
     getData()
-    // doubleCheck()
+  
    
   }, []);
 
@@ -95,21 +83,7 @@ const Home = () => {
       <div className="posts">
         {employee.map((employee, index) => {
           return (
-            <div key={index}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={employee.pictureUrl} />
-                <Card.Body>
-                  <Card.Title>{employee.firstname}</Card.Title>
-                  <Card.Text>{employee.location}</Card.Text>
-                  <p><Link to={`/employees/${employee._id}`}>read More</Link></p>
-                  <button disabled={disabled}  onClick={(id) => {
-                saveInfo(employee._id)
-                // doubleCheck()
-                
-            }}>{disabled ? 'Added to favorite' :  'Add to favorite' }</button>
-                </Card.Body>
-              </Card>
-            </div>
+            <Employee saveInfo={saveInfo} employee={employee} key={index}/>
           );
         })}
       </div>

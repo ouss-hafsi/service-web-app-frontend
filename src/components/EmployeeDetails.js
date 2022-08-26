@@ -31,7 +31,11 @@ const EmployeeDetails = () => {
 
   return (
     <>
-
+<p>First name: {employeeInfo.firstname}</p>
+<p>Last name: {employeeInfo.lastname}</p>
+<p>Email: {employeeInfo.email}</p>
+<p>Location: {employeeInfo.location}</p>
+<p>Phone number: {employeeInfo.phonenumber}</p>
     </>
   );
 };
