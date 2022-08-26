@@ -14,6 +14,7 @@ import Welcome from './components/Welcome';
 import Navigation from './components/Navigation';
 import Login from './components/Login'
 import SignupUser from './components/SignupUser';
+import EmployeeDetails from './components/EmployeeDetails';
 
 
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/home" element={<Home signIn={signIn}/>} />
           <Route path='/signup' element={<SignupUser/>}/>
           <Route path='/users/:id' element={<UserInfo/>}/>
+          <Route path='/employees/:id' element={<EmployeeDetails/>}/>
         </Routes>
       </main>
 

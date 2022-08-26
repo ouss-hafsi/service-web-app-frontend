@@ -7,33 +7,62 @@ import Search from "./Search";
 
 
 const Home = () => {
+
+   
   const [employee, setEmployee] = useState([]);
-  const [username, setUsername] = useState("");
-  const [userId, setUserId] = useState("");
   const [query, setQuery] = useState("");
+  const [disabled, setDisabled] = useState(false)
+  const [savedEmployee, setSavedEmployee] = useState([])
+
+  function getData() {
+    const config = localStorage.getItem("Token");
+    const config1 = { headers: { Authorization: `Bearer ${config}` } };
+    axios
+      .get(`https://ouss-service-app.herokuapp.com/employees`, config1)
+      .then((res) => {
+        // console.log(res.data);
+        setEmployee(res.data);
+      });
+  }
+
+  function saveInfo(id) {
+    const findEmployee = employee.find( employee => employee._id === id)
+    if(localStorage.getItem('employee')) {
+      // if employee not empty push the new element
+      const getEmployee = localStorage.getItem('employee')
+      const employeeArr = JSON.parse(getEmployee)
+      employeeArr.push(findEmployee)
+      localStorage.setItem('employee',JSON.stringify(employeeArr))
+    } else {
+      // else if empty create a new array with the first elemenet
+      localStorage.setItem('employee',JSON.stringify([findEmployee]))
+    }
+    setSavedEmployee(findEmployee)
+   
+  }
+
+//   function doubleCheck() {
+//     const getEmployee = localStorage.getItem('employee')
+//     const employeeArr = JSON.parse(getEmployee) 
+//         // console.log('DoubleCheck Here!!')
+//     if(employeeArr ) {
+//         console.log('employeeArr', employeeArr)
+//         const checkEmployee = employeeArr.find(employees => employees._id === employee.id) 
+//         console.log('check Employee', checkEmployee)
+//         if (checkEmployee) {
+//             return setDisabled(true)
+//         } 
+//     }
+
+// }
+  
+
+
 
   useEffect(() => {
-    axios.get(`https://ouss-service-app.herokuapp.com/users`).then((res) => {
-      const config = localStorage.getItem("Token");
-      const config1 = { headers: { Authorization: `Bearer ${config}` } };
-
-      // console.log("this is config", config);
-      const users = res.data;
-      const loggedInUser = users.find(
-        (user) => user.username === window.localStorage.getItem("Username")
-      );
-      // console.log(loggedInUser);
-      const loggedInUserId = loggedInUser._id;
-      setUserId(loggedInUserId);
-      setUsername(loggedInUser.username);
-      // console.log(loggedInUserId);
-      axios
-        .get(`https://ouss-service-app.herokuapp.com/employees`, config1)
-        .then((res) => {
-          console.log(res.data);
-          setEmployee(res.data);
-        });
-    });
+    getData()
+    // doubleCheck()
+   
   }, []);
 
 
@@ -54,15 +83,14 @@ const Home = () => {
     setEmployee(Search);
   }
 
+
+
   if (!employee) {
     return <h1>Loading...</h1>;
   }
 
   return (
     <>
-      <h1>
-        welcom:<Link to={`/users/${userId}`}> {username}</Link>
-      </h1>
       <Search handleChange={handleChange} handleSearch={handleSearch}/>
       <div className="posts">
         {employee.map((employee, index) => {
@@ -73,6 +101,12 @@ const Home = () => {
                 <Card.Body>
                   <Card.Title>{employee.firstname}</Card.Title>
                   <Card.Text>{employee.location}</Card.Text>
+                  <p><Link to={`/employees/${employee._id}`}>read More</Link></p>
+                  <button disabled={disabled}  onClick={(id) => {
+                saveInfo(employee._id)
+                // doubleCheck()
+                
+            }}>{disabled ? 'Added to favorite' :  'Add to favorite' }</button>
                 </Card.Body>
               </Card>
             </div>

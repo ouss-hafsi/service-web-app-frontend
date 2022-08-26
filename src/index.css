@@ -115,7 +115,7 @@ list-style: none;
   z-index: 3;
   margin-top:-10px;
   text-decoration: none;
-  color: #ED116B;
+  color: white;
   font-family: 'Open Sans';
   font-size: 18px;
   font-weight: bold;
@@ -239,3 +239,7 @@ color: white;
   text-decoration: none;
   color: black;
 }
+
+
+
+
