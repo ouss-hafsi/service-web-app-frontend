@@ -28,27 +28,30 @@ function handleSubmit(event) {
 
   return (
     <>
-      
-      <form onSubmit={handleSubmit} className="create-form">
+      <div className="signup-format">
+
+      <form onSubmit={handleSubmit} className="signup-form">
+        <h1>Sign up</h1>
 
       <div>
-        <label className="create-label" htmlFor="name">Name</label>
-        <input onChange={handleChange} type="text" id="username" placeholder="name" />
+        {/* <label className="create-label" htmlFor="name">Name</label> */}
+        <input onChange={handleChange} type="text" id="username" placeholder="username" />
       </div>
 
       <div>
-        <label className="create-label" htmlFor="image">email</label>  
-        <input onChange={handleChange} type="email" id="email" placeholder="image-url" />
+        {/* <label className="create-label" htmlFor="image">email</label>   */}
+        <input onChange={handleChange} type="email" id="email" placeholder="email" />
       </div>  
 
       <div>
-        <label className="create-label" htmlFor="description">password</label>
-        <input onChange={handleChange} type="password" id="password" placeholder="description" />
+        {/* <label className="create-label" htmlFor="description">password</label> */}
+        <input onChange={handleChange} type="password" id="password" placeholder="password" />
       </div>
 
 
-        <button className="create-button" type='submit'>Create</button>
+        <button  type='submit'>Create</button>
       </form>
+      </div>
     </>
   );
 };

@@ -5,10 +5,11 @@ const Search = ({ handleChange, handleSearch }) => {
     <>
       <div className="search-wrapper">
         <form className="search-form" onSubmit={handleSearch}>
-          <input className="search-input" onChange={handleChange} type="text" />
-          <button className="search-button" type="submit">
+          <input  onChange={handleChange} type="text" />
+          <button  type="submit">
             Search
           </button>
+          
         </form>
       </div>
     </>

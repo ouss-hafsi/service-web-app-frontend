@@ -30,18 +30,23 @@ const Employee = ({saveInfo, employee}) => {
     return(
         <>
         <div>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={employee.pictureUrl} />
+              <Card style={{ width: "18rem"}}>
+                <Card.Img className="box-picture" variant="top" src={employee.pictureUrl} />
                 <Card.Body>
-                  <Card.Title>{employee.firstname}</Card.Title>
-                  <Card.Text>{employee.location}</Card.Text>
-                  <p><Link to={`/employees/${employee._id}`}>read More</Link></p>
+                  <Card.Title className="employee-name">{employee.firstname} {employee.lastname}</Card.Title>
+                  <Card.Text className="location-text"><p>Location:</p>  {employee.location}</Card.Text>
+                  <Card.Text className="category-text"> <p>Category:</p> {employee.category}</Card.Text>
+                  <div className="read-save-block" >
+                  <Link to={`/employees/${employee._id}`} className='link-read-more' ><button className='read-more'>Read more</button></Link>
 
-                  <button disabled={disabled}  onClick={(id) => {
-                saveInfo(employee._id)
-                doubleCheck()
-                
-            }}>{disabled ? 'Saved' :  'Save Information' }</button>
+                  <button  className='save-information' disabled={disabled}  onClick={(id) => { 
+                    saveInfo(employee._id)
+                    doubleCheck()
+                }}>{disabled ? 'Saved' :  'Save Information' }</button>
+
+
+
+                  </div>
                 </Card.Body>
               </Card>
             </div>

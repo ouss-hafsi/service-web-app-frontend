@@ -1,0 +1,22 @@
+@media  screen and (max-width:607px) {
+    .nav-toggle{
+      display: block;
+    }
+    .nav-menu{
+      position: fixed;
+      top: 15vh;
+      right: 0;
+      width: 50%;
+      height: 93vh;
+      padding-bottom: 300px;
+      background-color: black;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition:0.5s ease-in ;
+      z-index: 99;
+    }
+  /* NAV ACTIVE CLASS */
+  .nav-active {
+    transform: translateX(0%);
+  }
+  }

@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import Carousel from 'react-bootstrap/Carousel';
+import clean1 from '../images/clean-1.png'
+import plumber from '../images/plumber.png'
 
 import ListGroup from "react-bootstrap/ListGroup";
 import Search from "./Search";
@@ -56,19 +58,22 @@ const Home = () => {
 
   function handleChange(event) {
     setQuery(event.target.value);
+    console.log(query)
   }
 
   function handleSearch(event) {
+
     event.preventDefault();
     const Search = employee.filter((employee) => {
       if (employee.category) {
         const lowerQuery = query.toLowerCase()
-        const lowerPostName = employee.category.toLowerCase()
-        return lowerPostName.includes(lowerQuery);
+        const lowerEmCategory = employee.category.toLowerCase()
+        return lowerEmCategory.includes(lowerQuery);
       }
     });
     console.log(Search);
     setEmployee(Search);
+    
   }
 
 
@@ -79,8 +84,46 @@ const Home = () => {
 
   return (
     <>
+    <Carousel>
+      <Carousel.Item interval={8000}>
+        <img
+          className="d-block w-100"
+          src={clean1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3></h3>
+          <p className="o">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={8000}>
+        <img
+          className="d-block w-100"
+          src={plumber}
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+          <h3 ></h3>
+          <p className="o">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={clean1}
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <h3></h3>
+          <p className="o">
+            NEW OFFER WE PROVIDE HOUSE CLEANING NOW.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
       <Search handleChange={handleChange} handleSearch={handleSearch}/>
-      <div className="posts">
+      <div className="employee-box">
         {employee.map((employee, index) => {
           return (
             <Employee saveInfo={saveInfo} employee={employee} key={index}/>

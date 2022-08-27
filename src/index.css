@@ -7,6 +7,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f4f7f6;
+}
+
+.box-picture{
+  border-radius: 0%;
+}
+
+.card{
+  border-radius: 0%;
+}
+
+.bo{
+  display: flex;
 }
 
 /*                                 LOGIN PAGE                */
@@ -28,11 +41,11 @@ body {
   
 }
 
-.login-form label {
+/* .login-form label {
   font-size: 18px;
   font-family:'Quicksand', sans-serif;
   font-weight: 600;
-}
+} */
 
 .login-form input{
   border:1px solid #264653;
@@ -62,9 +75,55 @@ height: 50px;
 } */
 
 
+
+
+
+
+/*                       SIGNUP                       */
+
+.signup-format {
+  background-color:transparent;
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888; 
+}
+
+.signup-form {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:20px;
+  
+}
+
+/* .login-form label {
+  font-size: 18px;
+  font-family:'Quicksand', sans-serif;
+  font-weight: 600;
+} */
+
+.signup-form input{
+  border:1px solid #264653;
+  font-size: 13px;
+  
+  width: 300px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.signup-form button{
+background-color: black;
+color: white;
+width: 300px;
+height: 50px;
+}
+
+
 /*                                 HOME         */
 
-.posts{
+.employee-box{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -73,6 +132,79 @@ height: 50px;
 
 }
 
+
+
+/*                                EMPLOYEE          */
+
+.location-text, .category-text{
+  display: flex;
+}
+
+.category-text{
+  display: flex;
+  margin-top: -25px;
+}
+
+.location-text p{
+  font-weight: bold;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+.category-text p{
+  font-weight: bold;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+.employee-name{
+  font-family: 'Open Sans';
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.read-more{
+  background-color: black;
+  width: 100px;
+  height: 30px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+ margin-top: -20px;
+ border: none;
+ color:white;
+ text-decoration: none;
+}
+
+
+
+.read-more:hover{
+background-color: #f4f7f6;
+color: black;
+
+}
+
+.link-read-more{
+  text-decoration: none;
+  /* color:white; */
+
+}
+.link-read-more:hover{
+  
+  color:black;
+
+}
+.read-save-block{
+  margin-top: -5px;
+}
+
+.save-information{
+  font-family: 'Open Sans';
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+}
 
 
 
@@ -111,14 +243,13 @@ list-style: none;
 }
 
 .brand{
+  font-family: 'Alfa Slab One';
  margin-left: 20px ;
   z-index: 3;
   margin-top:-10px;
   text-decoration: none;
   color: white;
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 30px;
   --bs-nav-link-hover-color: #ED116B;
 }
 
@@ -161,28 +292,7 @@ color: white;
   
 
 
-@media  screen and (max-width:607px) {
-  .nav-toggle{
-    display: block;
-  }
-  .nav-menu{
-    position: fixed;
-    top: 15vh;
-    right: 0;
-    width: 50%;
-    height: 93vh;
-    padding-bottom: 300px;
-    background-color: black;
-    flex-direction: column;
-    transform: translateX(100%);
-    transition:0.5s ease-in ;
-    z-index: 99;
-  }
-/* NAV ACTIVE CLASS */
-.nav-active {
-  transform: translateX(0%);
-}
-}
+
 
 
 
@@ -243,3 +353,70 @@ color: white;
 
 
 
+/*                                   EMPLOYEE DETAILS            */
+
+
+.discription-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description {
+font-family: 'open sans';
+ font-size: 12px;
+ color: black;
+
+}
+
+.desc-title{
+  font-family: 'open sans';
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.email-details {
+  font-size: 10px;
+  font-family: 'open sans';
+  font-weight: bold;
+  color: black;
+}
+
+.card-background {
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+
+
+
+
+/*                                           SEARCH                    */
+
+
+.search-wrapper{
+  display: flex;
+  margin-top:50px;
+  margin-bottom: 30px;
+  justify-content: center;
+  
+}
+
+/* .search-form{
+  display: flex;
+  justify-content: center;
+  } */
+
+.search-form input{
+  width: 400px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.search-form button{
+  background-color: black;
+  color: white;
+  border: none;
+  height: 30px;
+}
