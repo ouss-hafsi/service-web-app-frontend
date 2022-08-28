@@ -55,16 +55,16 @@ function deleteAll() {
 
   <Container>
   <Row xs={1} md={4} lg={4} xl={4} className='g-4'>
-  <button className='fav-clear' onClick={deleteAll}>Delete all</button>  
+  <button className='delete-all' onClick={deleteAll}>Delete all</button>  
   </Row>
     <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
     
     {employeesArr.map((employee,index) => {
             return(
      <Col key={index}>
-            <Card className='fav-card h-100'  >
+            <Card className='h-100'  >
                 {employee.pictureUrl && (
-               <Card.Img
+               <Card.Img className='box-picture'
                 variant='top'
                 src={employee.pictureUrl ? employee.pictureUrl : ''}
                 alt={employee.firstname}
@@ -76,11 +76,11 @@ function deleteAll() {
             ) : (
                 <Card.Title>No Image Available</Card.Title>
             )}
-            <Card.Text className='fav-text'>{employee.firstname}</Card.Text>
+            <Card.Text className='my-employee-name'>{employee.firstname} {employee.lastname}</Card.Text>
         </Card.Body>
 
         <Card.Footer>
-		   <Button className='fav-button' onClick={()=> {removeMovie(employee._id)}} variant='outline-dark'>
+		   <Button className='my-employee-button' onClick={()=> {removeMovie(employee._id)}} variant='outline-dark'>
 					Remove
 			</Button>
 		</Card.Footer>

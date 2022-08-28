@@ -46,7 +46,7 @@
     .landing-format {
       background-color: transparent;
       width: 413px;
-      height: 300px;
+      height: 350px;
       margin: 0 auto;
       box-shadow: 5px 5px 10px #888888;
   }
@@ -81,7 +81,7 @@
     .landing-format {
       background-color: transparent;
       width: 350px;
-      height: 300px;
+      height: 350px;
       margin: 0 auto;
       box-shadow: 5px 5px 10px #888888;
   }
@@ -134,7 +134,7 @@
 .landing-format {
   background-color: transparent;
   width: 300px;
-  height: 300px;
+  height: 350px;
   margin: 0 auto;
   box-shadow: 5px 5px 10px #888888;
 }

@@ -19,9 +19,7 @@ body {
   background-color: transparent;
   border: none;
 }
-.bo{
-  display: flex;
-}
+
 
 
 
@@ -96,7 +94,7 @@ body {
 .landing-format {
   background-color:transparent;
   width: 500px;
-  height: 300px;
+  height: 350px;
   margin: 0 auto;
   box-shadow: 5px 5px 10px #888888; 
 }
@@ -274,7 +272,7 @@ color: black;
 	align-items: center;
 	height: 15vh;
  background-color:black; 
- --bs-nav-link-hover-color: #ED116B;
+ --bs-nav-link-hover-color: white;
 }
 
 .nav li{
@@ -297,7 +295,7 @@ list-style: none;
 }
 
 .nav-link:hover{
-  color: #ED116B;
+  color: white;
 
 }
 
@@ -309,7 +307,7 @@ list-style: none;
   text-decoration: none;
   color: white;
   font-size: 30px;
-  --bs-nav-link-hover-color: #ED116B;
+  --bs-nav-link-hover-color: white;
 }
 
 .brand:hover{
@@ -499,3 +497,31 @@ color: white;
 width: 300px;
 height: 50px;
 }
+
+
+
+/*              MY EMPLOYEE                   */
+
+.my-employee-name{
+font-family: 'open sans';
+font-size: 16px;
+font-weight: bold;
+}
+
+.my-employee-button{
+  border-radius: 0%;
+  background-color: black;
+  color: white;
+}
+
+.delete-all{
+  background-color: black;
+  color: white;
+  font-family: 'open sans';
+  font-size: 14px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+

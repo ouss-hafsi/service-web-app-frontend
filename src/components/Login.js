@@ -9,7 +9,7 @@ const Login = ( {handleChange, handleSubmit, error} ) => {
      <h1 className='login-form-text'>Login</h1>
           <input onChange={(event) => handleChange (event)} type="text" id="username" placeholder="username" />
           <input onChange={(event) => handleChange (event)} type="password" id="password" placeholder="password" />
-          {/* <p>{error}</p> */}
+          <p>{error}</p>
           <button  type='submit'>Sign in</button>
         </form>
      </div>
