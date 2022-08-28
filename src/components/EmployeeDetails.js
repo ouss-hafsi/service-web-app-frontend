@@ -44,30 +44,17 @@ const EmployeeDetails = () => {
 
   return (
     <>
-{/* <p>First name: {employeeInfo.firstname}</p>
-<p>Last name: {employeeInfo.lastname}</p>
-<p>Email: {employeeInfo.email}</p>
-<p>Location: {employeeInfo.location}</p>
-<p>Phone number: {employeeInfo.phonenumber}</p> */}
-
-
-
 <div className='discription-box'>
-
-
-{/* <Container> */}
   <Card className='card-background ' style={{ width: '28rem'}}>
       <Card.Img variant="top"  src={employeeInfo.pictureUrl} />
       <Card.Body>
-        <Card.Title className='desc-title'>{employeeInfo.firstname} {employeeInfo.lastname}</Card.Title>
-        <Card.Text className='email-details'>{employeeInfo.email}</Card.Text>
-        <Card.Text className='description'>{employeeInfo.location}</Card.Text>
-        <Card.Text className='description'>{employeeInfo.phonenumber}</Card.Text>
-  </Card.Body>
-    </Card>
-
-{/* </Container> */}
-         </div>
+        <Card.Title className="employee-info" ><span >Name: </span>{employeeInfo.firstname} {employeeInfo.lastname}</Card.Title>
+        <Card.Text className='email-details-info'><span>Email: </span>{employeeInfo.email}</Card.Text>
+        <Card.Text className='description-info'><span>Location: </span>{employeeInfo.location}</Card.Text>
+        <Card.Text className='phonenumber-info'><span>Phone number: </span>{employeeInfo.phonenumber}</Card.Text>
+      </Card.Body>
+  </Card>
+</div>
     </>
   );
 };

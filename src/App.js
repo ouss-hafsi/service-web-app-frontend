@@ -14,13 +14,14 @@ import Login from "./components/Login";
 import SignupUser from "./components/SignupUser";
 import EmployeeDetails from "./components/EmployeeDetails";
 import MyEmployees from "./components/MyEmployees";
+import EmployeeSignup from "./components/EmployeeSignup";
 
 function App() {
   const location = useLocation();
 
   const navigate = useNavigate();
   // The signin state
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [signIn, setSignIn] = useState({
     username: "",
     password: "",
@@ -47,10 +48,11 @@ function App() {
       .then(() => {
         navigate("/home");
       })
+
       .catch(err => {
+        console.log(error)
         setError("Provided email or password is incorrect.");
       });
-      console.log(error)
   };
 
   return (
@@ -64,21 +66,14 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Welcome />} />
-          <Route
-            path="/login"
-            element={
-              <Login
-                handleSubmit={handleSubmit}
-                handleChange={handleChange}
-                signIn={signIn}
-              />
-            }
-          />
+          <Route path="/login" element={<Login error={error} handleSubmit={handleSubmit} handleChange={handleChange} signIn={signIn}/>}/>
           <Route path="/home" element={<Home signIn={signIn} />} />
           <Route path="/signup" element={<SignupUser />} />
           <Route path="/users/:id" element={<UserInfo />} />
           <Route path="/employees/:id" element={<EmployeeDetails />} />
           <Route path="/myemployees" element={<MyEmployees />} />
+          {/* <Route path="/employeesignup" element={<EmployeeSignup />} /> */}
+
         </Routes>
       </main>
     </>

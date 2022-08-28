@@ -1,3 +1,15 @@
+@media  screen and (max-width:750px) {
+  .logo-dark-mode {
+    width: 33%;
+    margin-top: 60px;
+    animation-delay: 1s;
+    animation: fadeIn 1s ease-in both;
+}
+}
+
+
+
+
 @media  screen and (max-width:607px) {
     .nav-toggle{
       display: block;
@@ -20,3 +32,170 @@
     transform: translateX(0%);
   }
   }
+
+  @media  screen and (max-width:593px) {
+    .search-form input {
+      width: 313px;
+      height: 30px;
+      border: 1px solid black;
+  }
+  }
+
+
+  @media  screen and (max-width:523px) {
+    .landing-format {
+      background-color: transparent;
+      width: 413px;
+      height: 300px;
+      margin: 0 auto;
+      box-shadow: 5px 5px 10px #888888;
+  }
+
+  .signup-format {
+    background-color: transparent;
+    width: 413px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.landing-format-user{
+  background-color:transparent;
+  width: 413px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+  }
+
+  @media  screen and (max-width:446px) {
+    .search-form input {
+      width: 248px;
+      height: 30px;
+      border: 1px solid black;
+  }
+
+  }
+
+  @media  screen and (max-width:434px) {
+    .landing-format {
+      background-color: transparent;
+      width: 350px;
+      height: 300px;
+      margin: 0 auto;
+      box-shadow: 5px 5px 10px #888888;
+  }
+
+  .signup-format {
+    background-color: transparent;
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+.landing-format-user{
+  background-color:transparent;
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+  }
+
+
+  @media  screen and (max-width:373px) {
+    .landing-text {
+      color: black;
+      font-family: 'open sans';
+      font-size: 12px;
+      font-weight: 100;
+  }
+  }
+
+  @media  screen and (max-width:361px) {
+    .login-form input {
+      border: 1px solid #264653;
+      font-size: 13px;
+      width: 250px;
+      height: 50px;
+      margin-bottom: 20px;
+  }
+
+  .login-form button {
+    font-family: 'open sans';
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 50px;
+}
+
+.landing-format {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+
+
+.signup-form input {
+  border: 1px solid #264653;
+  font-size: 13px;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.signup-form button {
+  font-family: "open sans";
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  width: 250px;
+  height: 50px;
+}
+
+.signup-format {
+  background-color: transparent;
+  width: 297px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.user-form input{
+  border:1px solid black;
+  font-size: 13px;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.user-form button{
+  border:1px solid black;
+  font-size: 13px;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.landing-format-user{
+  background-color:transparent;
+  width: 297px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+  }
+
+
+
+  @media  screen and (max-width:329px) {
+    .search-form input {
+      width: 210px;
+      height: 30px;
+      border: 1px solid black;
+  }  }

@@ -40,11 +40,14 @@ const UserInfo = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <div className="landing-format-user">
+    <form className='user-form' onSubmit={handleSubmit}>
+      <h1 className="user-form-text">Edit Profile</h1>
       <input type='text' id='username'  value={userInfo.username} onChange={handleChange}></input>
       <input type='email' id='email'  value={userInfo.email} onChange={handleChange}></input>
-      <button type='submit'>edit</button>
+      <button type='submit'>Edit</button>
     </form>
+    </div>
     
     </>
   );

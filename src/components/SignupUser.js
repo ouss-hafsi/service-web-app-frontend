@@ -31,7 +31,7 @@ function handleSubmit(event) {
       <div className="signup-format">
 
       <form onSubmit={handleSubmit} className="signup-form">
-        <h1>Sign up</h1>
+        <h1 className="signup-form-text">Sign up</h1>
 
       <div>
         {/* <label className="create-label" htmlFor="name">Name</label> */}
@@ -49,7 +49,7 @@ function handleSubmit(event) {
       </div>
 
 
-        <button  type='submit'>Create</button>
+        <button  type='submit'>Submit</button>
       </form>
       </div>
     </>

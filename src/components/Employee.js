@@ -34,8 +34,8 @@ const Employee = ({saveInfo, employee}) => {
                 <Card.Img className="box-picture" variant="top" src={employee.pictureUrl} />
                 <Card.Body>
                   <Card.Title className="employee-name">{employee.firstname} {employee.lastname}</Card.Title>
-                  <Card.Text className="location-text"><p>Location:</p>  {employee.location}</Card.Text>
-                  <Card.Text className="category-text"> <p>Category:</p> {employee.category}</Card.Text>
+                  <Card.Text className="location-text"><span>Location:</span>  {employee.location}</Card.Text>
+                  <Card.Text className="category-text"> <span>Category:</span> {employee.category}</Card.Text>
                   <div className="read-save-block" >
                   <Link to={`/employees/${employee._id}`} className='link-read-more' ><button className='read-more'>Read more</button></Link>
 

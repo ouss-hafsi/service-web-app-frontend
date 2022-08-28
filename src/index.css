@@ -14,13 +14,82 @@ body {
   border-radius: 0%;
 }
 
-.card{
+.card {
   border-radius: 0%;
+  background-color: transparent;
+  border: none;
 }
-
 .bo{
   display: flex;
 }
+
+
+
+
+/*                               WELCOME PAGE               */
+
+.welcome-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.hello{
+  font-family: 'open sans';
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: darkgray;
+  margin-top: 20px;
+}
+
+.landing-text{
+  color: black;
+  font-family: 'open sans';
+  font-size: 16px;
+  font-weight: 100;
+
+}
+
+.logo-dark-mode{
+  width: 15% ;
+  margin-top:60px;
+}
+
+.login-signup{
+  display: flex;
+ 
+}
+
+.login-welcome{
+  font-family: 'open sans';
+  text-decoration: none;
+  color:black;
+  padding-right: 20px;
+}
+
+.login-welcome:hover{
+  color:black;
+}
+
+.signup-welcome{
+  font-family: 'open sans';
+  text-decoration: none;
+  color: black;
+}
+
+.signup-welcome:hover{
+  color: black;
+}
+
+
+
+
+
+
 
 /*                                 LOGIN PAGE                */
 
@@ -41,41 +110,28 @@ body {
   
 }
 
-/* .login-form label {
-  font-size: 18px;
-  font-family:'Quicksand', sans-serif;
-  font-weight: 600;
-} */
+.login-form-text{
+  font-family: 'open sans';
+  margin-bottom: 20px;
+  font-weight: 500;
+}
 
 .login-form input{
   border:1px solid #264653;
   font-size: 13px;
-  
   width: 300px;
   height: 50px;
   margin-bottom: 20px;
 }
 
 .login-form button{
+font-family:'open sans';
+font-weight: 500;
 background-color: black;
 color: white;
 width: 300px;
 height: 50px;
 }
-
-
-
-/* .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
-  color:white !important;
-  background-color:red !important;
-  width: 100px;
-  margin-top:20px !important;
-  text-transform: none !important;
-  margin-left:80px !important;
-} */
-
-
-
 
 
 
@@ -90,7 +146,7 @@ height: 50px;
 }
 
 .signup-form {
-  margin-top: 130px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,11 +154,11 @@ height: 50px;
   
 }
 
-/* .login-form label {
-  font-size: 18px;
-  font-family:'Quicksand', sans-serif;
-  font-weight: 600;
-} */
+.signup-form-text{
+  font-family: 'open sans';
+  margin-bottom: 20px;
+  font-weight: 500; 
+}
 
 .signup-form input{
   border:1px solid #264653;
@@ -114,6 +170,8 @@ height: 50px;
 }
 
 .signup-form button{
+  font-family: 'open sans';
+  font-weight: 600;
 background-color: black;
 color: white;
 width: 300px;
@@ -145,14 +203,15 @@ height: 50px;
   margin-top: -25px;
 }
 
-.location-text p{
+.location-text span{
   font-weight: bold;
   padding-right: 10px;
   font-family: 'Open Sans';
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
-.category-text p{
+.category-text span{
   font-weight: bold;
   padding-right: 10px;
   font-family: 'Open Sans';
@@ -291,68 +350,6 @@ color: white;
     }
   
 
-
-
-
-
-
-
-/*                               WELCOME PAGE               */
-
-.welcome-page{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  flex-direction: column;
-}
-
-.hello{
-  font-family: 'open sans';
-  font-size: 25px;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: darkgray;
-  margin-top: 20px;
-}
-
-.landing-text{
-  color: darkgray;
-  font-family: 'open sans';
-  font-size: 16px;
-  font-weight: 100;
-
-}
-
-.logo-dark-mode{
-  width: 15% ;
-  margin-top:60px;
-  animation-delay: 1s;
-  animation: fadeIn 1s ease-in both;
-}
-
-.login-signup{
-  display: flex;
-}
-
-.login-welcome{
-  text-decoration: none;
-  color:black;
-}
-
-.login-welcome:hover{
-  color:red;
-}
-
-.signup-welcome{
-  text-decoration: none;
-  color: black;
-}
-
-
-
-
 /*                                   EMPLOYEE DETAILS            */
 
 
@@ -362,30 +359,70 @@ color: white;
   justify-content: center;
 }
 
-.description {
-font-family: 'open sans';
- font-size: 12px;
- color: black;
-
-}
-
-.desc-title{
+.employee-info {
   font-family: 'open sans';
+   font-size: 12px;
+   color: black;
+  
+  }
+
+.employee-info span{
+  font-weight: bold;
+  padding-right: 10px;
+  font-family: 'Open Sans';
   font-size: 14px;
+    
+  }
+
+
+.email-details-info{
+  font-family: 'open sans';
+  font-size: 12px;
   color: black;
-  font-weight: bold;
 }
 
-.email-details {
-  font-size: 10px;
-  font-family: 'open sans';
+.email-details-info span{
   font-weight: bold;
-  color: black;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-size: 14px;
 }
+
+
+.description-info{
+  font-family: 'open sans';
+  font-size: 12px;
+  color: black;
+  margin-top: -10px;
+}
+
+.description-info span{
+  font-weight: bold;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  
+}
+
+.phonenumber-info{
+  font-family: 'open sans';
+  font-size: 12px;
+  color: black;
+  margin-top: -10px;
+}
+
+.phonenumber-info span{
+  font-weight: bold;
+  padding-right: 10px;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
 
 .card-background {
   background-color: transparent;
   margin-top: 20px;
+  border: 1px solid black;
 }
 
 
@@ -419,4 +456,46 @@ font-family: 'open sans';
   color: white;
   border: none;
   height: 30px;
+}
+
+
+/*                          PROFILE                             */
+
+.landing-format-user{
+  background-color:transparent;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.user-form{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:20px;
+}
+
+.user-form-text{
+  font-family: 'open sans';
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.user-form input{
+  border:1px solid black;
+  font-size: 13px;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.user-form button{
+  font-family:'open sans';
+font-weight: 500;
+background-color: black;
+color: white;
+width: 300px;
+height: 50px;
 }
