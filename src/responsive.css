@@ -13,6 +13,7 @@
 @media  screen and (max-width:607px) {
     .nav-toggle{
       display: block;
+      margin-right: 32px;
     }
     .nav-menu{
       position: fixed;
@@ -174,12 +175,24 @@
   margin-bottom: 20px;
 }
 
-.user-form button{
-  border:1px solid black;
-  font-size: 13px;
-  width: 250px;
-  height: 50px;
-  margin-bottom: 20px;
+.user-form-edit{
+  font-family:'open sans';
+font-weight: 500;
+background-color: black;
+color: white;
+width: 100px;
+height: 50px;
+border: none;
+}
+
+.user-form-delete{
+  font-family:'open sans';
+font-weight: 500;
+border: none;
+background-color:red;
+color: white;
+width: 100px;
+height: 50px;
 }
 
 .landing-format-user{

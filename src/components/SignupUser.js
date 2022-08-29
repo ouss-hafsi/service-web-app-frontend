@@ -6,6 +6,7 @@ const SignupUser = () => {
 
 
   const navigate = useNavigate();
+  const [error, setError] = useState()
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -23,6 +24,10 @@ function handleSubmit(event) {
         console.log("the post is" + user)
         navigate('/login')
     })
+    .catch(err => {
+      console.log(err.response.data)
+      setError(err.response.data);
+    });
 }   
 
 
@@ -48,7 +53,7 @@ function handleSubmit(event) {
         <input onChange={handleChange} type="password" id="password" placeholder="password" />
       </div>
 
-
+        <p>{error}</p>
         <button  type='submit'>Submit</button>
       </form>
       </div>

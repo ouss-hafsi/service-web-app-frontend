@@ -188,6 +188,14 @@ height: 50px;
 
 }
 
+.carousel-text{
+  font-family: 'open sans';
+  font-weight: bold;
+  color: black;
+  /* background-color: white;
+  width: 500px; */
+}
+
 
 
 /*                                EMPLOYEE          */
@@ -268,7 +276,7 @@ color: black;
 /*               NAVIGATION            */
 .nav{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	height: 15vh;
  background-color:black; 
@@ -325,7 +333,7 @@ color: white;
   width: 40px;
   height: 2px;
   margin:5px;
-  background-color: #ED116B;
+  background-color:white;
   transition: 0.4s ease-in;
 }
 
@@ -489,12 +497,23 @@ color: white;
   margin-bottom: 20px;
 }
 
-.user-form button{
+.user-form-edit{
   font-family:'open sans';
 font-weight: 500;
 background-color: black;
 color: white;
-width: 300px;
+width: 150px;
+height: 50px;
+border: none;
+}
+
+.user-form-delete{
+  font-family:'open sans';
+font-weight: 500;
+border: none;
+background-color:red;
+color: white;
+width: 150px;
 height: 50px;
 }
 

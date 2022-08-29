@@ -31,7 +31,17 @@ const UserInfo = () => {
       window.localStorage.setItem("Username", userInfo.username)
       navigate("/home");
     });
+  }
 
+
+  function handleDelete() {
+    axios.delete(`https://ouss-service-app.herokuapp.com/users/${id}`)
+    .then(() => {
+      localStorage.removeItem('Token')
+      localStorage.removeItem('Username')
+      localStorage.removeItem('employee')
+      navigate('/')
+    })
   }
 
   if (!userInfo) {
@@ -45,7 +55,11 @@ const UserInfo = () => {
       <h1 className="user-form-text">Edit Profile</h1>
       <input type='text' id='username'  value={userInfo.username} onChange={handleChange}></input>
       <input type='email' id='email'  value={userInfo.email} onChange={handleChange}></input>
-      <button type='submit'>Edit</button>
+      <div>
+      <button type='submit' className="user-form-edit">Edit</button>
+      <button type='button' className="user-form-delete" onClick={handleDelete}>Delete</button>
+
+      </div>
     </form>
     </div>
     

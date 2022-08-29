@@ -62,19 +62,24 @@ const Home = () => {
   }
 
   function handleSearch(event) {
-
-    event.preventDefault();
+    event.preventDefault()
     const Search = employee.filter((employee) => {
-      if (employee.category) {
+      
+      if (employee.category || employee.location ) {
         const lowerQuery = query.toLowerCase()
         const lowerEmCategory = employee.category.toLowerCase()
-        return lowerEmCategory.includes(lowerQuery);
+        const lowerEmLocation = employee.location.toLowerCase()
+        return lowerEmCategory.includes(lowerQuery) || lowerEmLocation.includes(lowerQuery) ;
       }
     });
     console.log(Search);
     setEmployee(Search);
     
   }
+
+
+  
+
 
 
 
@@ -93,7 +98,7 @@ const Home = () => {
         />
         <Carousel.Caption>
           <h3></h3>
-          <p className="o">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
+          <p className="carousel-text">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={8000}>
@@ -104,7 +109,7 @@ const Home = () => {
         />
         <Carousel.Caption>
           <h3 ></h3>
-          <p className="o">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
+          <p className="carousel-text">NEW OFFER WE PROVIDE HOUSE CLEANING NOW.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -115,14 +120,14 @@ const Home = () => {
         />
         <Carousel.Caption>
           <h3></h3>
-          <p className="o">
+          <p className="carousel-text">
             NEW OFFER WE PROVIDE HOUSE CLEANING NOW.
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
 
-      <Search handleChange={handleChange} handleSearch={handleSearch}/>
+      <Search handleChange={handleChange} handleSearch={handleSearch} />
       <div className="employee-box">
         {employee.map((employee, index) => {
           return (

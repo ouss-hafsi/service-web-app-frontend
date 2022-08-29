@@ -65,7 +65,7 @@ const Navigation = () => {
       <nav className="nav"><Link to="/" className="brand">Fix<span>It</span></Link>
         <ul className={active}>
           <li className="nav-item"><Link to="/home" onClick={hide} className="nav-link">Home</Link></li>
-          <li className="nav-item"><Link to="/myemployees"  className="nav-link">My employees</Link></li>
+          <li className="nav-item"><Link to="/myemployees"  className="nav-link" onClick={hide} >My employees</Link></li>
           <li className="nav-item"><Link to={`/users/${userId}`} onClick={hide} className="nav-link">welcome {username}</Link></li>
           <li className="nav-item nav-link" onClick={logOut} >Log out</li>
         </ul>

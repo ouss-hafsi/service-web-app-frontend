@@ -18,6 +18,7 @@ import EmployeeSignup from "./components/EmployeeSignup";
 
 function App() {
   const location = useLocation();
+  // console.log(location)
 
   const navigate = useNavigate();
   // The signin state
@@ -38,16 +39,33 @@ function App() {
     axios.post(`https://ouss-service-app.herokuapp.com/users/signin`, signIn)
     
       .then((res) => {
-        console.log(res);
-        // save token to local storage
-        window.localStorage.setItem("Token", res.data.token);
-        console.log(res.data.token);
-        // save email to local storage
-        window.localStorage.setItem("Username", signIn.username);
+
+        if(res.data !== 'The provided username or password is incorrect') {
+
+          console.log(res);
+          // save token to local storage
+          window.localStorage.setItem("Token", res.data.token);
+          console.log(res.data.token);
+          // save email to local storage
+          window.localStorage.setItem("Username", signIn.username);
+          navigate("/home");
+          setError(null)
+
+        } else {
+          navigate("/login");
+          setError('Provided email or password is incorrect.')
+        }
       })
-      .then(() => {
-        navigate("/home");
-      })
+      // .then((res) => {
+      //   console.log('this is res',res)
+      //   if(res.status === 200) {
+          
+      //     navigate("/home");
+      //   } else {
+
+      //     navigate("/login");
+      //   }
+      // })
 
       .catch(err => {
         console.log(error)
@@ -57,9 +75,7 @@ function App() {
 
   return (
     <>
-      {location.pathname !== "/" &&
-      location.pathname !== "/login" &&
-      location.pathname !== "/signup" ? (
+      {location.pathname !== "/" && location.pathname !== "/login" && location.pathname !== "/signup" ? (
         <Navigation />
       ) : null}
 

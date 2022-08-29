@@ -5,7 +5,7 @@ const Search = ({ handleChange, handleSearch }) => {
     <>
       <div className="search-wrapper">
         <form className="search-form" onSubmit={handleSearch}>
-          <input  onChange={handleChange} type="text" />
+          <input  onChange={handleChange} type="text" placeholder="Search by category or city" />
           <button  type="submit">
             Search
           </button>
