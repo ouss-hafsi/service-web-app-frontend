@@ -9,7 +9,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 // import {ImGithub} from 'react-icons/im'
 
-const Navigation = () => {
+const Navigation = ({defaultColor,showText}) => {
   const navigate = useNavigate()
   const [username, setUsername] = useState("");
   const [userId, setUserId] = useState("");
@@ -62,12 +62,17 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="nav"><Link to="/" className="brand">Easy-Fix</Link>
+      <nav className={`nav ${defaultColor}`}><Link to="/" className="brand">Easy-Fix</Link>
         <ul className={active}>
           <li className="nav-item"><Link to="/home" onClick={hide} className="nav-link">Home</Link></li>
           <li className="nav-item"><Link to="/myemployees"  className="nav-link" onClick={hide} >My employees</Link></li>
           <li className="nav-item"><Link to={`/users/${userId}`} onClick={hide} className="nav-link">welcome {username}</Link></li>
           <li className="nav-item nav-link log-out " onClick={logOut} >Log out</li>
+          <li > <select  onChange={showText}>
+            <option value="Default">Default</option>
+            <option value="blueberry">blueberry</option>
+            <option value="lemon">lemon</option>
+          </select></li>
         </ul>
 
         <div onClick={navToggle} className={toggleIcon}>

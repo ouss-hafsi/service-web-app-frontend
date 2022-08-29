@@ -17,6 +17,12 @@ import MyEmployees from "./components/MyEmployees";
 import EmployeeSignup from "./components/EmployeeSignup";
 
 function App() {
+
+  const [defaultColor, setDefaultColor] = useState("Default");
+  function showText(event) {
+    setDefaultColor(event.target.value);
+    console.log(defaultColor)
+  }
   const location = useLocation();
   // console.log(location)
 
@@ -28,7 +34,7 @@ function App() {
     password: "",
   });
 
-  const [variab, setVariab] = useState(null)
+ 
   
 
   const handleChange = (event) => {
@@ -82,7 +88,7 @@ function App() {
   return (
     <>
       {location.pathname !== "/" && location.pathname !== "/login" && location.pathname !== "/signup" ? (
-        <Navigation />
+        <Navigation defaultColor={defaultColor} showText={showText}/>
       ) : null}
 
       <main>

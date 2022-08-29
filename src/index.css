@@ -24,6 +24,8 @@ body {
 
 
 
+
+
 /*                               WELCOME PAGE               */
 
 .welcome-page{
@@ -361,7 +363,39 @@ color: white;
 .toggle .line3{
       transform: rotate(45deg) translate(-4px, -5px);
     }
+
+
+
+
+    /*        COLOR              */
+
+    .nav select{
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-family: 'open sans';
+      font-weight: 300;
+    
+    }
+    
+    .nav select option{
+      background-color:  #2a9d8f;
+       /* border: none; */
+      color: white;
+      font-family: 'open sans';
+      font-weight: 300;
+       
+    }
   
+
+    .Default{
+      background-color: black;
+    }
+    
+    .blueberry{
+      /* background-image:none; */
+      background-color:red;
+    }
 
 /*                                   EMPLOYEE DETAILS            */
 
