@@ -28,6 +28,9 @@ function App() {
     password: "",
   });
 
+  const [variab, setVariab] = useState(null)
+  
+
   const handleChange = (event) => {
     setSignIn({ ...signIn, [event.target.id]: event.target.value });
     console.log("signin username is", signIn.username);
@@ -35,6 +38,9 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const val = signIn.username.toLowerCase()
+    signIn.username = val
+
 
     axios.post(`https://ouss-service-app.herokuapp.com/users/signin`, signIn)
     
