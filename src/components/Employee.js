@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 
-const Employee = ({saveInfo, employee}) => {
+const Employee = ({saveInfo, employee, defaultColor}) => {
 
     const [disabled, setDisabled] = useState(false)
 
@@ -37,7 +37,7 @@ const Employee = ({saveInfo, employee}) => {
                   <Card.Text className="location-text"><span>Location:</span>  {employee.location}</Card.Text>
                   <Card.Text className="category-text"> <span>Category:</span> {employee.category}</Card.Text>
                   <div className="read-save-block" >
-                  <Link to={`/employees/${employee._id}`} className='link-read-more' ><button className='read-more'>Read more</button></Link>
+                  <Link to={`/employees/${employee._id}`} className='link-read-more' ><button className={`read-more ${defaultColor}`}>Read more</button></Link>
 
                   <button  className='save-information' disabled={disabled}  onClick={(id) => { 
                     saveInfo(employee._id)

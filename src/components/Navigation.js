@@ -70,8 +70,7 @@ const Navigation = ({defaultColor,showText}) => {
           <li className="nav-item nav-link log-out " onClick={logOut} >Log out</li>
           <li > <select  onChange={showText}>
             <option value="Default">Default</option>
-            <option value="blueberry">blueberry</option>
-            <option value="lemon">lemon</option>
+            <option value="red">Red</option>
           </select></li>
         </ul>
 

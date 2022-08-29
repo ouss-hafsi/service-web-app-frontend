@@ -95,7 +95,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/login" element={<Login error={error} handleSubmit={handleSubmit} handleChange={handleChange} signIn={signIn}/>}/>
-          <Route path="/home" element={<Home signIn={signIn} />} />
+          <Route path="/home" element={<Home defaultColor={defaultColor} signIn={signIn} />} />
           <Route path="/signup" element={<SignupUser />} />
           <Route path="/users/:id" element={<UserInfo />} />
           <Route path="/employees/:id" element={<EmployeeDetails />} />

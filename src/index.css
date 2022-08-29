@@ -310,7 +310,6 @@ list-style: none;
 }
 
 .log-out{
-  border:1px solid white;
   cursor: pointer;
   height: 40px;
   margin-right: 20px ;
@@ -367,35 +366,7 @@ color: white;
 
 
 
-    /*        COLOR              */
 
-    .nav select{
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-family: 'open sans';
-      font-weight: 300;
-    
-    }
-    
-    .nav select option{
-      background-color:  #2a9d8f;
-       /* border: none; */
-      color: white;
-      font-family: 'open sans';
-      font-weight: 300;
-       
-    }
-  
-
-    .Default{
-      background-color: black;
-    }
-    
-    .blueberry{
-      /* background-image:none; */
-      background-color:red;
-    }
 
 /*                                   EMPLOYEE DETAILS            */
 
@@ -498,7 +469,7 @@ color: white;
   border: 1px solid black;
 }
 
-.search-form button{
+.search-form-button{
   background-color: black;
   color: white;
   border: none;
@@ -585,3 +556,33 @@ font-weight: bold;
 }
 
 
+    /*        COLOR              */
+
+    .nav select{
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-family: 'open sans';
+      margin-right: 20px;
+      font-weight: 300;
+      border: 1px solid white;
+    
+    }
+    
+    .nav select option{
+      background-color:black;
+      color: white;
+      font-family: 'open sans';
+      font-weight: 300;
+       
+    }
+  
+
+    .Default{
+      background-color: black;
+    }
+    
+    .red{
+      /* background-image:none; */
+      background-color:#b30000;
+    }

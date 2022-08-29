@@ -9,7 +9,7 @@ import Search from "./Search";
 import Employee from "./Employee";
 
 
-const Home = () => {
+const Home = ({defaultColor}) => {
 
    
   const [employee, setEmployee] = useState([]);
@@ -127,11 +127,11 @@ const Home = () => {
       </Carousel.Item>
     </Carousel>
 
-      <Search handleChange={handleChange} handleSearch={handleSearch} />
+      <Search handleChange={handleChange} handleSearch={handleSearch} defaultColor={defaultColor} />
       <div className="employee-box">
         {employee.map((employee, index) => {
           return (
-            <Employee saveInfo={saveInfo} employee={employee} key={index}/>
+            <Employee defaultColor={defaultColor} saveInfo={saveInfo} employee={employee} key={index}/>
           );
         })}
       </div>
