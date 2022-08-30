@@ -8,7 +8,7 @@ const Welcome = () => {
         <img src={logo} className="logo-dark-mode" />
         <h2 className="hello">Hello!</h2>
         <p className="landing-text">
-          Welcome to fixit my new service web application!
+          Welcome to Easy-Fix my new service web application!
         </p>
         <div className="login-signup">
           <p><Link to='/login' className="login-welcome">Login</Link></p>
