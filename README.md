@@ -4,10 +4,10 @@ Easy-Fix is a service website that allows users to create an account, looks for 
 [App Link](https://chipper-sundae-892dda.netlify.app/).
 
 ## Wire Frames
-![landing](c:/Users/oussa/OneDrive/Desktop/1.png)
-![Home page](c:/Users/oussa/OneDrive/Desktop/3.png)
-![edit user mobile frame](c:/Users/oussa/OneDrive/Desktop/6.png)
-
+![landing page](readme%20wireframes/1.png)
+![home page](readme%20wireframes/3.png)
+![home page](readme%20wireframes/4.png)
+![edit page mobile view](readme%20wireframes/6.png)
 ## Installation
 
 1.	Fork and clone this repository
