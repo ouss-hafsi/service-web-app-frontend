@@ -9,9 +9,6 @@ const UserInfo = () => {
   const [userInfo, setUserInfo] = useState(null);
 
   useEffect(() => {
-    // const config = localStorage.getItem("Token");
-    // const config1 = { headers: { Authorization: `Bearer ${config}` } };
-    // console.log("this is config", config);
     axios
       .get(`https://ouss-service-app.herokuapp.com/users/${id}`)
       .then((res) => {
