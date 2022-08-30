@@ -1,13 +1,10 @@
-///////Navigation.js
+
 import { useState,useEffect } from "react";
 import {useNavigate} from "react-router-dom";
-
 import React from "react";
 import axios from "axios";
-// import Navbar from 'react-bootstrap/Navbar';
-// import Nav from 'react-bootstrap/Nav';
 import { Link } from "react-router-dom";
-// import {ImGithub} from 'react-icons/im'
+
 
 const Navigation = ({defaultColor,showText}) => {
   const navigate = useNavigate()

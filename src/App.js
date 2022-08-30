@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
+
 import "./index.css";
 import './responsive.css';
 import React, { useState } from "react";
@@ -68,16 +67,6 @@ function App() {
           setError('Provided email or password is incorrect.')
         }
       })
-      // .then((res) => {
-      //   console.log('this is res',res)
-      //   if(res.status === 200) {
-          
-      //     navigate("/home");
-      //   } else {
-
-      //     navigate("/login");
-      //   }
-      // })
 
       .catch(err => {
         console.log(error)

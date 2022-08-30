@@ -1,20 +1,10 @@
 
 import { useState,useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
 import React from "react";
 import axios from "axios";
-
 import Card from 'react-bootstrap/Card';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Container from 'react-bootstrap/Container';
-// import Button from 'react-bootstrap/Button';
 
-// import {ImPlay3} from 'react-icons/im'
-
-
-// import ListGroup from 'react-bootstrap/ListGroup';
 
 
 

@@ -39,17 +39,14 @@ function handleSubmit(event) {
         <h1 className="signup-form-text">Sign up</h1>
 
       <div>
-        {/* <label className="create-label" htmlFor="name">Name</label> */}
         <input onChange={handleChange} type="text" id="username" placeholder="username" />
       </div>
 
       <div>
-        {/* <label className="create-label" htmlFor="image">email</label>   */}
         <input onChange={handleChange} type="email" id="email" placeholder="email" />
       </div>  
 
       <div>
-        {/* <label className="create-label" htmlFor="description">password</label> */}
         <input onChange={handleChange} type="password" id="password" placeholder="password" />
       </div>
 

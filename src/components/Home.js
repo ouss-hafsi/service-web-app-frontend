@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import clean1 from '../images/clean-1.png'
 import plumber from '../images/plumber.png'
-
-import ListGroup from "react-bootstrap/ListGroup";
 import Search from "./Search";
 import Employee from "./Employee";
 
@@ -15,8 +13,6 @@ const Home = ({defaultColor}) => {
   const [employee, setEmployee] = useState([]);
   const [query, setQuery] = useState("");
   
-  // const [savedEmployee, setSavedEmployee] = useState([])
-
   function getData() {
     const config = localStorage.getItem("Token");
     const config1 = { headers: { Authorization: `Bearer ${config}` } };
