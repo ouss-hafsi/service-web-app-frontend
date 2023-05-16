@@ -10,7 +10,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ouss-service-app.herokuapp.com/users/${id}`)
+      .get(`https://service-web-app-backend.herokuapp.com/users/${id}`)
       .then((res) => {
         console.log('this is user data', (res.data));
         setUserInfo(res.data);
@@ -23,7 +23,7 @@ const UserInfo = () => {
 
   function handleSubmit(event) {
     event.preventDefault()
-    axios.put(`https://ouss-service-app.herokuapp.com/users/${id}`, userInfo)
+    axios.put(`https://service-web-app-backend.herokuapp.com/users/${id}`, userInfo)
     .then(() => {
       window.localStorage.setItem("Username", userInfo.username)
       navigate("/home");
@@ -32,7 +32,7 @@ const UserInfo = () => {
 
 
   function handleDelete() {
-    axios.delete(`https://ouss-service-app.herokuapp.com/users/${id}`)
+    axios.delete(`https://service-web-app-backend.herokuapp.com/users/${id}`)
     .then(() => {
       localStorage.removeItem('Token')
       localStorage.removeItem('Username')

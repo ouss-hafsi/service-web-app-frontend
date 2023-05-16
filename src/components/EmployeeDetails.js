@@ -17,7 +17,7 @@ const EmployeeDetails = () => {
     const config1 = { headers: { Authorization: `Bearer ${config}` } };
     // console.log("this is config", config);
     axios
-      .get(`https://ouss-service-app.herokuapp.com/employees/${id}`, config1)
+      .get(`https://service-web-app-backend.herokuapp.com/employees/${id}`, config1)
       .then((res) => {
         console.log('this is user data', (res.data));
         setEmployeeInfo(res.data);
