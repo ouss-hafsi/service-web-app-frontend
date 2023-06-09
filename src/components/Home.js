@@ -17,7 +17,7 @@ const Home = ({defaultColor}) => {
     const config = localStorage.getItem("Token");
     const config1 = { headers: { Authorization: `Bearer ${config}` } };
     axios
-      .get(`https://service-web-app-backend.herokuapp.com/employees`, config1)
+      .get(`https://service-web-app-backend.onrender.com/employees`, config1)
       .then((res) => {
         // console.log(res.data);
         setEmployee(res.data);

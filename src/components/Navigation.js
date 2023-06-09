@@ -30,7 +30,7 @@ const Navigation = ({defaultColor,showText}) => {
 
 
   useEffect(() => {
-    axios.get(`https://service-web-app-backend.herokuapp.com/users`).then((res) => {
+    axios.get(`https://service-web-app-backend.onrender.com/users`).then((res) => {
       const config = localStorage.getItem("Token");
       const config1 = { headers: { Authorization: `Bearer ${config}` } };
 

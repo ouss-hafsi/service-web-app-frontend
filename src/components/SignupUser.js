@@ -19,7 +19,7 @@ setUser({...user, [event.target.id]: event.target.value })
 
 function handleSubmit(event) {
     event.preventDefault()
-    axios.post('https://service-web-app-backend.herokuapp.com/users/signup', user)
+    axios.post('https://service-web-app-backend.onrender.com/users/signup', user)
     .then(() => {
         console.log("the post is" + user)
         navigate('/login')
