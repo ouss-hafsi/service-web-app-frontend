@@ -27,4 +27,5 @@ As a user, I want to edit or delete my profile
 
 ## Technology and Tools
 
-ReactJS | React Bootstrap | JavaScript | HTML | CSS
+Front-End: ReactJS | React Bootstrap | JavaScript | HTML | CSS
+Back-End: MongoDB | Mongoose | Express
